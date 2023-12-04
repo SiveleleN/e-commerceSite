@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=EB+Garamond:ital,wght@1,500&family=Hedvig+Letters+Sans&family=Metal+Mania&family=Playfair+Display&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+        font-family: 'Arial', sans-serif;
+        background-color: #006A4E;
+    }
+    
+    #nav {
+        background-color: #f8f9fa; 
+        height: auto;
+        width: 100%;
+        position: sticky;
+        display: flex;
+    }
+
+ 
+    nav a {
+        color: #007bff; 
+    }
+
+    section {
+        margin: 50px;
+        left: 0;
+    }
+
+    h1, h3 {
+        color: yellow; 
+    }
+
+    p {
+        color: #333; 
+    }
+
+    section h3 {
+        margin-top: 20px;
+    }
+    #home {
+        background-image: url(https://i.postimg.cc/rsJVtnzN/Moringa-2-480x480.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    h1 {
+        color: white;
+        text-align: center;
+    }
