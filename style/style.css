@@ -4,17 +4,15 @@
     padding: 0;
 }
 
-body {
-        font-family: 'Arial', sans-serif;
-        background-color: #006A4E;
-    }
-    
+
+  
+    /*this is for my navbar in all the pages I have*/
     #nav {
         background-color: #f8f9fa; 
         height: auto;
         width: 100%;
         position: sticky;
-        display: flex;
+        display: fixed;
     }
 
  
@@ -22,15 +20,17 @@ body {
         color: #007bff; 
     }
 
+    
+    /*sort my section in my about page*/
     section {
         margin: 50px;
         left: 0;
     }
-
-    h1, h3 {
+    /*styling my heading in about page*/
+    .heading {
         color: yellow; 
     }
-
+    /*styling my paragraph in about page*/
     p {
         color: #333; 
     }
@@ -38,12 +38,176 @@ body {
     section h3 {
         margin-top: 20px;
     }
-    #home {
+    /*styling my home page here*/
+    .home {
         background-image: url(https://i.postimg.cc/rsJVtnzN/Moringa-2-480x480.webp);
         background-repeat: no-repeat;
         background-size: cover;
-    }
-    h1 {
-        color: white;
         text-align: center;
+    }
+    .main-heading{
+        color: white;
+        margin: auto;
+        /* margin: 100%; */
+    }
+
+    .animate__animated.animate__bounce {
+        --animate-duration: 3s;
+    }
+
+    /* 
+      h1{
+        color: white;
+        right: 100%; }*/
+    /*fixing my picture in about page*/
+    #Sett {
+        display: flex;
+    }
+    
+    #picture {
+        max-width: 80%; 
+        margin-right: 20px; 
+    }
+    
+    .text-content {
+        flex-grow: 5; 
+    }
+     body{
+        background-color: #006A4E;
+
+     }
+    @keyframes moveLeft {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(-20px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes moveRight {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(20px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }  
+
+    /* Apply animation to h1 and h3 */
+    #top {
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+
+    .heading {
+        animation-name: moveLeft;
+    }
+
+    .heading {
+        animation-name: moveRight;
+    }
+    /* span {
+        color: yellow; 
+        font-weight: bold; 
+        font-size: 18px; 
+        text-decoration: underline; 
+      }
+      .container {
+        margin-top: 20px;
+    }
+    .product-section {
+        display: flex;
+        margin: 20px;
+    }
+    
+    .product-info {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 26px;
+        border-radius: 8px;
+        justify-content: space-around;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    } */
+    
+    /* .product-info img {
+        border: 1px solid white;
+        padding: 26px;
+        margin: 18px;
+        text-align: center;
+        background-color: #006A4E;
+    }
+    h2 {
+        position: relative;
+    }
+    .todolist-section {
+        margin-top: 30px;
+        
+    } */
+    
+    /* #cards{
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    } */
+    /*.h1Home{
+        text-align: center;
+        position: relative;
+        padding-top: 80%;
+    }*/
+    footer {
+        
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+        /* margin: 0%; */
+        margin-top: 32%;
+
+    }
+
+    /* styling my search bar */
+      .container-fluid {
+        margin: 20px;
+        background-color: #006A4E;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+          
+      }
+    
+      .row {
+        margin-bottom: 15px;
+      }
+    
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+    
+      button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    
+    .card{
+        width: calc(33.33% - 5px);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 10px;
+        justify-content: space-between;
+
     }
