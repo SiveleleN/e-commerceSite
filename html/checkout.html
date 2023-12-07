@@ -29,10 +29,10 @@
                 <a class="nav-link" href="/html/product.html">PRODUCT</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/html/admin.html">ADMIN</a>
+                <a class="nav-link" href="/html/checkout.html">CHECKOUT</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/html/checkout.html">CHECKOUT</a>
+                <a class="nav-link" href="/html/admin.html">ADMIN</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/html/contact.html">CONTACT</a>
@@ -41,6 +41,29 @@
           </div>
         </div>
     </nav>
+      
+      <table data-table>
+           <h2>BILLING</h2>
+          <tr>
+            <th>Index</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Image</th>
+          </tr>
+      </table>
+      <button id="continueCheckout">Continue with Checkout</button>
+    <div id="paymentOptions" style="display: none;">
+        <label for="paymentMethod">Select Payment Method:</label>
+        <select id="paymentMethod">
+            <option value="creditCard">Credit Card</option>
+            <option value="masterPass">MasterPass</option>
+            <option value="bankTransfer">Bank Transfer</option>
+            <option value="paypal">PayPal</option>
+        </select>
+        <label for="cardNumber">Enter Card Number</label>
+        <input type="text" id="cardNumber" placeholder="Enter your card number">
+        <button id="submitPayment">Submit Payment</button>
+    </div>
     <script src="/script/checkout.js"></script>
 </body>
 </html>
