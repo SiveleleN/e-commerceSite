@@ -277,9 +277,9 @@ margin: 20px;
   }
   
   .card img {
-    width: 50%; /* Make the image fill the card */
-    height: 200px; /* Set a fixed height for the image */
-    object-fit: cover; /* Scale the image while maintaining aspect ratio */
+    width: 50%; 
+    height: 200px; 
+    object-fit: cover; 
   }
   
   .card-body {
@@ -314,3 +314,22 @@ margin: 20px;
     font-size: 0.9rem;
     color: #333;
   }
+  
+body {
+    font-size: 16px;
+  }
+  
+ 
+  @media screen and (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+
+  @media screen and (max-width: 480px) {
+    body {
+      font-size: 12px;
+    }
+  }
+  
