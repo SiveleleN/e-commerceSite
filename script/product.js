@@ -49,19 +49,21 @@ let products = [
     "img": "https://i.postimg.cc/x11BpfBD/OIP_(7).jpg"
   }
 ];
+
 // Sorting button's reference
-let sortingProducts = document.querySelector('[data-sort]')
+let sortingProducts = document.querySelector('[data-sort]');
 
 // I am retrieving products from local storage or using default data
 products = JSON.parse(localStorage.getItem('products')) || products;
 localStorage.setItem('products', JSON.stringify(products));
 
-// using DOM elements
+// Using DOM elements
 let productsWrapper = document.querySelector('[data-products]');
 let searchInput = document.querySelector('[search-products]');
 
-let shopCart = []
-// using fuction display for products 
+let shopCart = JSON.parse(localStorage.getItem('cart')) || [];
+
+// Using function display for products
 function displayProduct(productsToDisplay) {
   productsWrapper.innerHTML = '';
   productsToDisplay.forEach((product) => {
@@ -71,7 +73,7 @@ function displayProduct(productsToDisplay) {
         <div class="card-body">
           <h3 class="card-title">${product.name}</h3>
           <p class="card-text">Price: R${product.price}</p>
-          <a href="#" class="btn btn-primary" onclick= 'addToCart(${JSON.stringify(product)})'>Add to Cart</a>
+          <a href="#" class="btn btn-primary" onclick='addToCart(${JSON.stringify(product)})'>Add to Cart</a>
         </div>
       </div>
     `;
@@ -84,32 +86,25 @@ displayProduct(products);
 // Search products function
 function searchProducts() {
   let searchTerm = searchInput.value.toLowerCase();
-  let filteredProducts = products.filter((product) =>{
-    return product.name.toLowerCase().includes(searchTerm) || product.description.toLowerCase().includes(searchTerm)
-    
-
+  let filteredProducts = products.filter((product) => {
+    return product.name.toLowerCase().includes(searchTerm) || product.description.toLowerCase().includes(searchTerm);
   });
-  
-  
+
   displayProduct(filteredProducts);
 }
-
 
 // Event listeners
 searchInput.addEventListener('input', searchProducts);
 
+// DisplayProduct
+sortingProducts.addEventListener('click', () => {
+  let sortedProducts = products.slice().sort((a, b) => a.price - b.price);
+  displayProduct(sortedProducts);
+});
 
-// displayProduct
-sortingProducts.addEventListener('click', ()=>{
-  let sortedProducts = products.sort( (arg1, arg2)=>{
-    return arg1.price - arg2.price
-  } )
-  displayProduct(sortedProducts)
-})
-
-function addToCart(item){
-  if(item){
-    shopCart.push(item)
-    localStorage.setItem('admin', JSON.stringify(purchasedProductArray))
+function addToCart(item) {
+  if (item) {
+    shopCart.push(item);
+    localStorage.setItem('cart', JSON.stringify(shopCart));
   }
 }
