@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // No changes to your JavaScript code
+    
     let h1 = document.querySelector("h1");
     let h3List = document.querySelectorAll("h3");
 
