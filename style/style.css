@@ -14,6 +14,16 @@
         position: sticky;
         display: fixed;
     }
+    .checkout{
+       border: 5PX solid black;
+       margin: 20px;
+    }
+    .check-info{
+        background-color:#04AA6D;
+        border: 7px solid black;
+        width: 40%;
+        margin: 0 0 0 30%;
+    }
 
  
     nav a {
@@ -32,7 +42,7 @@
     }
     /*styling my paragraph in about page*/
     p {
-        color: #333; 
+        color: whitesmoke; 
     }
 
     section h3 {
@@ -203,39 +213,28 @@
         cursor: pointer;
       }
     
-    .card{
-        width: calc(33.33% - 5px);
+    /* .card{
+        width: rem-18;
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: repeat(3, 1fr);
         margin-bottom: 10px;
         justify-content: space-between;
 
-    }
+    } */
 
 
     /* CONTACT PAGE */
 
-
-    label{
-        border: solid;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-    }
-
-
-
       input[type=text], select, textarea {
-       min-width: 100%;
-       padding: rem 
-       /* border: solid; 
+       border: solid; 
+       width: 100%; 
        padding: 5px; 
        border: 1px solid #ccc; 
        border-radius: 2px; 
        box-sizing: content-box; 
        margin-top: 6px; 
-       margin-bottom: 10px;  */
-
+       margin-bottom: 10px; 
+        resize: vertical 
   }
   
  
@@ -256,7 +255,62 @@
     
     .container {
         border: solid;
-        min-width: 50%;
+        min-width: 100%;
       border-radius: 5px;
       padding: 20px;
      }
+     
+     
+  
+      .form-container {
+        margin-top: 50px;
+      }
+
+     /* admin style */
+     /* Style for the product card */
+
+.card {
+    display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+margin: 20px;
+    background-color: #04AA6D;
+  }
+  
+  .card img {
+    width: 50%; /* Make the image fill the card */
+    height: 200px; /* Set a fixed height for the image */
+    object-fit: cover; /* Scale the image while maintaining aspect ratio */
+  }
+  
+  .card-body {
+    width: auto;
+    padding: 15px;
+
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    font-size: 1.2rem;
+  }
+  
+  .btn {
+    margin-top: 10px;
+  }
+  
+  /* Style for the footer */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light gray background */
+    border-top: 1px solid #ddd; /* Add a border at the top */
+  }
+  
+  /* Optional: Style the copyright text */
+  #copyright {
+    font-size: 0.9rem;
+    color: #333;
+  }

@@ -1,5 +1,5 @@
 //creating an array for purchasing the products
-let purchased = [
+let products = [
   {
     "id": 1,
     "name": "MARIGOLDS",
@@ -53,7 +53,7 @@ let purchased = [
 let sortingProducts = document.querySelector('[data-sort]')
 
 // I am retrieving products from local storage or using default data
-let products = JSON.parse(localStorage.getItem('products')) || purchased;
+products = JSON.parse(localStorage.getItem('products')) || products;
 localStorage.setItem('products', JSON.stringify(products));
 
 // using DOM elements
@@ -66,7 +66,7 @@ function displayProduct(productsToDisplay) {
   productsWrapper.innerHTML = '';
   productsToDisplay.forEach((product) => {
     productsWrapper.innerHTML += `
-      <div class="card mt-5">
+      <div class="card">
         <img src="${product.img}" class="card-img-top" alt="${product.name}">
         <div class="card-body">
           <h3 class="card-title">${product.name}</h3>
@@ -110,6 +110,6 @@ sortingProducts.addEventListener('click', ()=>{
 function addToCart(item){
   if(item){
     shopCart.push(item)
-    localStorage.setItem('checkout', JSON.stringify(shopCart))
+    localStorage.setItem('admin', JSON.stringify(purchasedProductArray))
   }
 }
